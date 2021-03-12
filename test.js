@@ -5,7 +5,7 @@ test('control-pictures', function (t) {
   t.equal(controlPictures(), '', 'should not fail without a value')
   t.equal(controlPictures('␉␊␋␌␍'), '\t\n\v\f\r', 'should work')
   t.equal(controlPictures('␀'), '\0', 'should support `␀`')
-  t.equal(controlPictures('a␡b'), 'a\x7fb', 'should support `␡`')
+  t.equal(controlPictures('a␡b'), 'a\u007Fb', 'should support `␡`')
 
   t.equal(
     controlPictures('␢␣'),

@@ -19,7 +19,7 @@ var map = {
  * @returns {string} Value but with actual control codes
  */
 export function controlPictures(value) {
-  return String(value == null ? '' : value).replace(
+  return String(value === undefined || value === null ? '' : value).replace(
     /[\u2400-\u2426]/g,
     replacer
   )

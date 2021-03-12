@@ -69,16 +69,6 @@
   "xo": {
     "prettier": true,
     "rules": {
-      "eqeqeq": [
-        "error",
-        "always",
-        {
-          "null": "ignore"
-        }
-      ],
-      "no-eq-null": "off",
-      "unicorn/escape-case": "off",
-      "unicorn/no-hex-escape": "off",
       "no-var": "off",
       "prefer-arrow-callback": "off"
     }
