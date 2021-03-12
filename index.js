@@ -1,7 +1,3 @@
-'use strict'
-
-module.exports = controlPictures
-
 var own = {}.hasOwnProperty
 
 var map = {
@@ -13,7 +9,7 @@ var map = {
   '␦': 26 /* SUB */
 }
 
-function controlPictures(value) {
+export function controlPictures(value) {
   return String(value == null ? '' : value).replace(
     /[\u2400-\u2426]/g,
     replacer

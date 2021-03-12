@@ -11,6 +11,9 @@ characters which you want to display, but also use.
 
 ## Install
 
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -20,6 +23,8 @@ npm install control-pictures
 ## Use
 
 ```js
+import {controlPictures} from 'control-pictures'
+
 controlPictures() //=> ''
 controlPictures('␉␊␋␌␍') //=> '\t\n\v\f\r'
 controlPictures('␀') //=> '\0'
@@ -28,6 +33,9 @@ controlPictures('␤') //=> '\n'
 ```
 
 ## API
+
+This package exports the following identifiers: `controlPictures`.
+There is no default export.
 
 ### `controlPictures(value?)`
 

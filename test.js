@@ -1,17 +1,23 @@
-'use strict'
-
-var test = require('tape')
-var m = require('.')
+import test from 'tape'
+import {controlPictures} from './index.js'
 
 test('control-pictures', function (t) {
-  t.equal(m(), '', 'should not fail without a value')
-  t.equal(m('␉␊␋␌␍'), '\t\n\v\f\r', 'should work')
-  t.equal(m('␀'), '\0', 'should support `␀`')
-  t.equal(m('a␡b'), 'a\x7fb', 'should support `␡`')
+  t.equal(controlPictures(), '', 'should not fail without a value')
+  t.equal(controlPictures('␉␊␋␌␍'), '\t\n\v\f\r', 'should work')
+  t.equal(controlPictures('␀'), '\0', 'should support `␀`')
+  t.equal(controlPictures('a␡b'), 'a\x7fb', 'should support `␡`')
 
-  t.equal(m('␢␣'), m('␠␠'), 'should support alt forms of spaces')
-  t.equal(m('␤'), '\n', 'should use line feeds for `␤`')
-  t.equal(m('␥␦'), m('␡␚'), 'should support alt forms of DEL, SUB')
+  t.equal(
+    controlPictures('␢␣'),
+    controlPictures('␠␠'),
+    'should support alt forms of spaces'
+  )
+  t.equal(controlPictures('␤'), '\n', 'should use line feeds for `␤`')
+  t.equal(
+    controlPictures('␥␦'),
+    controlPictures('␡␚'),
+    'should support alt forms of DEL, SUB'
+  )
 
   t.end()
 })
