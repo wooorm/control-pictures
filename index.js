@@ -1,5 +1,6 @@
 const own = {}.hasOwnProperty
 
+/** @type {Record<string, number>} */
 const map = {
   '␡': 127 /* DEL */,
   '␢': 32 /* ` ` */,
@@ -15,8 +16,10 @@ const map = {
  * Supports U+2400 SYMBOL FOR NULL (␀) through U+2426 SYMBOL FOR SUBSTITUTE
  * FORM TWO (`␦`).
  *
- * @param {string} [value] Value with control pictures
- * @returns {string} Value but with actual control codes
+ * @param {string} [value]
+ *   Value with control pictures
+ * @returns {string}
+ *   Value but with actual control codes
  */
 export function controlPictures(value) {
   return String(value === undefined || value === null ? '' : value).replace(
