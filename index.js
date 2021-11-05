@@ -11,10 +11,7 @@ const map = {
 }
 
 /**
- * Replace control pictures with the actual control codes.
- *
- * Supports U+2400 SYMBOL FOR NULL (␀) through U+2426 SYMBOL FOR SUBSTITUTE
- * FORM TWO (`␦`).
+ * Replace pictures for control character codes with actual control characters.
  *
  * @param {string} [value]
  *   Value with control pictures
