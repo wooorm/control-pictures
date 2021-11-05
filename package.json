@@ -1,6 +1,6 @@
 {
   "name": "control-pictures",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Replace pictures for control character codes with actual control characters",
   "license": "MIT",
   "keywords": [
