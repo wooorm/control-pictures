@@ -1,6 +1,6 @@
-var own = {}.hasOwnProperty
+const own = {}.hasOwnProperty
 
-var map = {
+const map = {
   '␡': 127 /* DEL */,
   '␢': 32 /* ` ` */,
   '␣': 32 /* ` ` */,
