@@ -39,7 +39,7 @@ Use this package if you:
 ## Install
 
 This package is [ESM only][esm].
-In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
+In Node.js (version 14.14+, 16.0+), install with [npm][]:
 
 ```sh
 npm install controlPictures
@@ -48,14 +48,14 @@ npm install controlPictures
 In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import {controlPictures} from 'https://esm.sh/control-pictures@7'
+import {controlPictures} from 'https://esm.sh/control-pictures@2'
 ```
 
 In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import {controlPictures} from 'https://esm.sh/control-pictures@7?bundle'
+  import {controlPictures} from 'https://esm.sh/control-pictures@2?bundle'
 </script>
 ```
 
@@ -73,7 +73,7 @@ controlPictures('␤') //=> '\n'
 
 ## API
 
-This package exports the following identifier: `controlPictures`.
+This package exports the identifier `controlPictures`.
 There is no default export.
 
 ### `controlPictures(value?)`
@@ -85,12 +85,12 @@ codes (`string`).
 ## Types
 
 This package is fully typed with [TypeScript][].
-There are no extra exported types.
+It exports no additional types.
 
 ## Compatibility
 
 This package is at least compatible with all maintained versions of Node.js.
-As of now, that is Node.js 12.20+, 14.14+, and 16.0+.
+As of now, that is Node.js 14.14+ and 16.0+.
 It also works in Deno and modern browsers.
 
 ## Security
