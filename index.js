@@ -29,7 +29,8 @@ export function controlPictures(value) {
  * @param {string} d
  */
 function replacer(d) {
-  return String.fromCharCode(
-    own.call(map, d) ? map[d] : d.charCodeAt(0) - 9216 /* `␀` */
+  return String.fromCodePoint(
+    // @ts-expect-error: never null.
+    own.call(map, d) ? map[d] : d.codePointAt(0) - 9216 /* `␀` */
   )
 }
